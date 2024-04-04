@@ -7,6 +7,7 @@ using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
 using ContentView = Microsoft.Maui.Platform.ContentView;
 
+// #18204 workaround
 public class NotAnimatedBorderHandler : BorderHandler
 {
     private class BorderContentView : ContentView
@@ -15,7 +16,6 @@ public class NotAnimatedBorderHandler : BorderHandler
         {
             FindAnimationLayers(this.Layer);
 
-            // #18204 workaround
             // This is the only workaround I found to avoid the animation when the border size is updated.
             // https://github.com/dotnet/maui/issues/15363
             // https://github.com/dotnet/maui/issues/18204
