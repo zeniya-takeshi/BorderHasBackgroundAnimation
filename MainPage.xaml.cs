@@ -1,5 +1,7 @@
 ﻿namespace BorderHasBackgroundAnimation;
 
+using Microsoft.Maui.Controls.Shapes;
+
 public partial class MainPage : ContentPage
 {
     public MainPage()
@@ -13,8 +15,7 @@ public partial class MainPage : ContentPage
     {
         if (this.isBorderOn)
         {
-            this.TheBorder.IsVisible = true;
-            //this.TheBorder.BackgroundColor = Colors.Red;
+            this.TheBorder.BackgroundColor = Colors.Red;
 
             //The same animation occurs even when changing the CornerRadius
             //this.TheBorder.StrokeShape = new Rectangle();
@@ -24,8 +25,7 @@ public partial class MainPage : ContentPage
         }
         else
         {
-            this.TheBorder.IsVisible = false;
-            //this.TheBorder.BackgroundColor = Colors.Transparent;
+            this.TheBorder.BackgroundColor = Colors.Green;
 
             //this.TheBorder.StrokeShape = new RoundRectangle { CornerRadius = new(100.0) };
 
@@ -46,12 +46,12 @@ public partial class MainPage : ContentPage
 
             //this.TheFrame.CornerRadius = 0f;
 
-            this.TheFrame.WidthRequest = 200.0;
+            //this.TheFrame.WidthRequest = 200.0;
         }
         else
         {
-            this.TheFrame.BackgroundColor = Colors.Transparent;
-            this.TheFrame.BorderColor = Colors.Transparent;
+            this.TheFrame.BackgroundColor = Colors.Green;
+            this.TheFrame.BorderColor = Colors.Green;
 
             //this.TheFrame.CornerRadius = 100f;
 
