@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BorderHasBackgroundAnimation.MainPage">
+    <AbsoluteLayout>
+        <Border AbsoluteLayout.LayoutBounds="10, 10, 200, 200"
+                x:Name="TheBorder"
+                StrokeShape="Rectangle"
+                StrokeThickness="0"
+                BackgroundColor="Red" />
+
+        <Frame AbsoluteLayout.LayoutBounds="10, 220, 200, 200" 
+               x:Name="TheFrame"
+               CornerRadius="0"
+               HasShadow="False"
+               BorderColor="Red"
+               BackgroundColor="Red" />
+
+        <!--Same Result-->
+        <!--<Border AbsoluteLayout.LayoutBounds="10, 10, AutoSize, AutoSize"
+                x:Name="TheBorder"
+                WidthRequest="200"
+                HeightRequest="200"
+                StrokeShape="Rectangle"
+                StrokeThickness="0"
+                BackgroundColor="Red" />
+
+        <Frame AbsoluteLayout.LayoutBounds="10, 220, AutoSize, AutoSize" 
+               x:Name="TheFrame"
+               WidthRequest="200"
+               HeightRequest="200"
+               CornerRadius="0"
+               HasShadow="False"
+               BorderColor="Red"
+               BackgroundColor="Red" />-->
+
+        <Button AbsoluteLayout.LayoutBounds="230, 20, 70, 180"
+                Text="Border"
+                Clicked="OnBorderChanged"
+                BackgroundColor="SkyBlue" />
+
+        <Button AbsoluteLayout.LayoutBounds="230, 230, 70, 180"
+                Text="Frame"
+                Clicked="OnFrameChanged"
+                BackgroundColor="Orange" />
+    </AbsoluteLayout>
+</ContentPage>
+
